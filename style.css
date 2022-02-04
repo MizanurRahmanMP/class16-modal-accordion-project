@@ -1,0 +1,259 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+    --shadow-1 :  0 .125rem .25rem rgba(0,0,0,.075);
+    --shadow-2 :  0 .5rem 1rem rgba(0,0,0,.15);
+    --shadow-3 :  0 1rem 3rem rgba(0,0,0,.175);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: linear-gradient( to right, #00AAFF, #00FF6c);
+}
+
+body.modal-open{
+    overflow: hidden;
+}
+*,
+*::before,
+*::after{
+
+    box-sizing: border-box;
+}
+
+html{
+    font-family: poppins;
+}
+a,
+a:hover{
+    text-decoration: none;
+}
+list{
+    list-style: none;
+}
+/* Bunner css area start */
+.banner{
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5) ), url(./img/497914.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .banner-content{
+    width: 500px;
+    height: auto;
+    text-align: center;
+}
+
+.banner .banner-content h1{
+    font-size: 60px;
+    font-weight: 900;
+    color: #fff;
+}
+.banner .banner-content p{
+    font-size: 20px;
+    font-weight: 200;
+    color: #fff;
+}
+.banner .banner-content a{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: var(--shadow-1);
+
+   
+
+}
+/* Bunner css area end */
+/* Modal css start */
+.mizan-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, .7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100px);
+    transition: all ease-in-out .3s;
+
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+.mizan-modal.active{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0px);
+}
+
+.mizan-modal .modal-content{
+    background-color: #fff;
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: var(--shadow-3);
+}
+.mizan-modal .modal-content .modal-header{
+    padding: 15px 20px;
+    border-bottom: 1px solid #e9e9e9;
+    display: flex;
+    justify-content: space-between;
+}
+button.cloes {
+    border: none;
+    font-size: 30px;
+    margin-top: -6px;
+    cursor: pointer;
+    background-color: #D8DADF;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: #5B626A;
+    display: inline-block;
+}
+button.cloes:hover{
+    background-color: #c1c5cf;
+}
+.mizan-modal .modal-content .modal-body{
+    font-size: 12px;
+    padding: 15px 20px;
+}
+.mizan-modal .modal-content .modal-footer{
+    font-size: 12px;
+    padding: 10px 20px;
+    border-top: 1px solid #e9e9e9;
+}
+
+/* Modal css area end */
+
+/* Alert Popup css area start */
+
+.mizan-alert{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.mizan-alert .alert-content{
+    width: 548px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: var(--shadow-2);
+}
+.mizan-alert .alert-content .alert-header{
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px silid #e9e9e9 !important;
+}
+.mizan-alert .alert-content .alert-body{
+    padding: 15px 20px;
+    font-size: 14px;
+}
+.mizan-alert .alert-content .alert-body .btns{
+    text-align: right;
+    margin-top: 15px;
+}
+.mizan-alert .alert-content .alert-body .btns a{
+    display: inline-block;
+    padding: 7px 40px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+}
+.mizan-alert .alert-content .alert-body .btns a:nth-child(1){
+    color: #1E6ED8;
+    font-weight: bold;
+}
+.mizan-alert .alert-content .alert-body .btns a:nth-child(2){
+    background-color: #1E6ED8;
+    font-weight: bold;
+    color: #fff;
+
+}
+/* Alert Popup css area end */
+
+/* Accordion css area start */
+
+.mr-accordion{
+    width: 600px;
+    margin: 200px auto 0;
+}
+
+.mr-accordion .accordion-items{
+    background-color: #e9e9e9;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-2);
+}
+.mr-accordion .accordion-items .accordion-header {
+    padding: 1px 10px;
+    cursor: pointer;
+    background-color: #ec88f5
+}
+
+.mr-accordion .accordion-items .accordion-header h1 {
+    border-bottom: 1px solid #c1c5cf;
+    position: relative;
+    color: rgb(63, 59, 59);
+    font-size: 25px;
+}
+.mr-accordion .accordion-items .accordion-header h1{
+    border-bottom: 1px solid #c1c5cf;
+    
+}
+.mr-accordion .accordion-items .accordion-header h1::after {
+    content: '\2303';
+    font-size: 30px;
+    position: absolute;
+    right: 5px;
+    margin-top: -2px;
+    transition: .5s;
+}
+.mr-accordion .accordion-items .accordion-header.active h1::after {
+    transform: rotate(180deg);
+}
+.mr-accordion .accordion-items .accordion-body {
+    padding: 15px 20px;
+    display: none;
+}
+
+.mr-accordion .accordion-items .accordion-body.active{
+    display: block;
+}
+.accordion-body.active {
+    background-color: #e6aeeb;
+    border-radius: 0 0 10px 10px;
+}
+
+
+
+
+
+/* Accordion css area start */
+
+
+
